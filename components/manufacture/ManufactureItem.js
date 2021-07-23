@@ -11,10 +11,10 @@ import { Image, Text, View } from 'react-native';
 const ManufactureItem = ({ manufacture }) => {
   return (
     <View style={{ flex: 1 }}>
-      <Text style={{ fontSize: '50px' }}>{manufacture.name}</Text>
+      <Text>{manufacture.name}</Text>
       <Image
         source={{ uri: manufacture.img }}
-        style={{ height: '100%', width: '100%' }}
+        style={{ height: '100%', width: '100%', flex: 1 }}
       />
     </View>
   );

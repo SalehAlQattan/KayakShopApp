@@ -24,21 +24,11 @@ const theme = {
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
-      <View
-        style={{
-          flex: 1,
-          height: '100%',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        <Text onPress={() => alert('You clicked me')}>
-          Open up App.js to start working on your app!
-        </Text>
+      <View style={styles.container}>
         <StatusBar style="auto" />
         {/* <ManufactureList /> */}
-        <KayakList />
-        {/* <Home /> */}
+        {/* <KayakList /> */}
+        <Home />
       </View>
     </ThemeProvider>
   );

@@ -11,7 +11,7 @@ import { Image, Text, View } from 'react-native';
 const KayakItem = ({ kayaks }) => {
   return (
     <View>
-      <Text style={{ fontSize: '50px' }}>{kayaks.name}</Text>
+      <Text>{kayaks.name}</Text>
       <Image
         source={{ uri: kayaks.img }}
         style={{ height: '100%', width: '100%' }}

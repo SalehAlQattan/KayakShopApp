@@ -2,18 +2,36 @@
 import React from 'react';
 
 // react-native
-import { ImageBackground, View } from 'react-native';
+import { Text, View } from 'react-native';
 
 // styles
-import { HomeBackground } from '../styles';
+import {
+  HomeBackground,
+  OverLayContainter,
+  ButtonStyling,
+  BottomStyling,
+  TopStyling,
+  Title,
+} from '../styles';
 
 const Home = () => {
   return (
     <HomeBackground
       source={{
-        uri: 'http://cdn.shopify.com/s/files/1/0550/6347/8477/products/grg9ymuoflgl1lkkc5h5.jpg?v=1619732530',
+        uri: 'https://res.cloudinary.com/thrillophilia/image/upload/c_fill,f_auto,fl_progressive.strip_profile,g_auto,h_600,q_auto,w_auto/v1/filestore/qytivbeitswj1772f73squhyd59s_shutterstock_1851576601.jpg',
       }}
-    />
+    >
+      <OverLayContainter>
+        <TopStyling>
+          <Title>Buy Your Kayak Now</Title>
+        </TopStyling>
+        <BottomStyling>
+          <ButtonStyling onPress={() => alert('Did you click me !?!')}>
+            Click here to skip
+          </ButtonStyling>
+        </BottomStyling>
+      </OverLayContainter>
+    </HomeBackground>
   );
 };
 
