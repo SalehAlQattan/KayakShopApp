@@ -7,16 +7,16 @@ import { observer } from 'mobx-react';
 // react-native
 import { Image, Text, View } from 'react-native';
 
+// native-base
+import { List } from 'native-base';
+
 // main function
-const KayakItem = ({ kayaks }) => {
+const KayakItem = ({ kayak }) => {
   return (
-    <View>
-      <Text>{kayaks.name}</Text>
-      <Image
-        source={{ uri: kayaks.img }}
-        style={{ height: '100%', width: '100%' }}
-      />
-    </View>
+    <List.Item>
+      <Image source={{ uri: kayak.img }} style={{ width: 100, height: 100 }} />
+      <Text>{kayak.name}</Text>
+    </List.Item>
   );
 };
 

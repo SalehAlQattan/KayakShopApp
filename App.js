@@ -4,13 +4,17 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 
 // react-navtive
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+
+// native-base
+import { NativeBaseProvider } from 'native-base';
 
 // styles
 import { ThemeProvider } from 'styled-components';
 
 // components
 import ManufactureList from './components/manufacture/ManufactureList';
+import ManufactureDetails from './components/manufacture/ManufactureDetails';
 import KayakList from './components/kayak/KayakList';
 import Home from './components/Home';
 
@@ -23,14 +27,16 @@ const theme = {
 
 export default function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <View style={styles.container}>
-        <StatusBar style="auto" />
-        {/* <ManufactureList /> */}
-        {/* <KayakList /> */}
-        <Home />
-      </View>
-    </ThemeProvider>
+    <NativeBaseProvider>
+      <ThemeProvider theme={theme}>
+        <View style={styles.container}>
+          {/* <ManufactureList /> */}
+          {/* <ManufactureDetails /> */}
+          {/* <KayakList /> */}
+          <Home />
+        </View>
+      </ThemeProvider>
+    </NativeBaseProvider>
   );
 }
 

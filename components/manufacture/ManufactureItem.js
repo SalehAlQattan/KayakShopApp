@@ -5,18 +5,24 @@ import React from 'react';
 import { observer } from 'mobx-react';
 
 // react-native
-import { Image, Text, View } from 'react-native';
+import { Image, Text } from 'react-native';
+
+// native-base
+import { List } from 'native-base';
+
+// styles
+import { ManufactureItemStyled } from './styles';
 
 // main function
 const ManufactureItem = ({ manufacture }) => {
   return (
-    <View style={{ flex: 1 }}>
-      <Text>{manufacture.name}</Text>
+    <List.Item>
       <Image
         source={{ uri: manufacture.img }}
-        style={{ height: '100%', width: '100%', flex: 1 }}
+        style={{ height: 100, width: 100 }}
       />
-    </View>
+      <ManufactureItemStyled>{manufacture.name}</ManufactureItemStyled>
+    </List.Item>
   );
 };
 
