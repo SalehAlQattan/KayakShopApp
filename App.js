@@ -1,22 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
+// react-navigation
+import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
+import RootNavigator from './components/Navigation/index';
 
 // react
 import React from 'react';
-
-// react-navtive
-import { StyleSheet, View } from 'react-native';
 
 // native-base
 import { NativeBaseProvider } from 'native-base';
 
 // styles
 import { ThemeProvider } from 'styled-components';
-
-// components
-import ManufactureList from './components/manufacture/ManufactureList';
-import ManufactureDetails from './components/manufacture/ManufactureDetails';
-import KayakList from './components/kayak/KayakList';
-import Home from './components/Home';
 
 // theme
 const theme = {
@@ -29,22 +23,10 @@ export default function App() {
   return (
     <NativeBaseProvider>
       <ThemeProvider theme={theme}>
-        <View style={styles.container}>
-          {/* <ManufactureList /> */}
-          {/* <ManufactureDetails /> */}
-          {/* <KayakList /> */}
-          <Home />
-        </View>
+        <NavigationContainer>
+          <RootNavigator />
+        </NavigationContainer>
       </ThemeProvider>
     </NativeBaseProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

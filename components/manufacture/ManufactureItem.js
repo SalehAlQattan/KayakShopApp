@@ -14,9 +14,13 @@ import { List } from 'native-base';
 import { ManufactureItemStyled } from './styles';
 
 // main function
-const ManufactureItem = ({ manufacture }) => {
+const ManufactureItem = ({ manufacture, navigation }) => {
   return (
-    <List.Item>
+    <List.Item
+      onPress={() =>
+        navigation.navigate('ManufactureDetails', { manufacture: manufacture })
+      }
+    >
       <Image
         source={{ uri: manufacture.img }}
         style={{ height: 100, width: 100 }}

@@ -14,7 +14,7 @@ import {
   Title,
 } from '../styles';
 
-const Home = () => {
+const Home = ({ navigation }) => {
   return (
     <HomeBackground
       source={{
@@ -26,7 +26,7 @@ const Home = () => {
           <Title>Buy Your Kayak Now</Title>
         </TopStyling>
         <BottomStyling>
-          <ButtonStyling onPress={() => alert('Did you click me !?!')}>
+          <ButtonStyling onPress={() => navigation.navigate('ManufactureList')}>
             Click here to skip
           </ButtonStyling>
         </BottomStyling>

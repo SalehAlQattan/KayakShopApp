@@ -24,10 +24,10 @@ import {
   ManufactureDetailTitle,
 } from './styles';
 
-const ManufactureDetails = () => {
-  if (manufactureStore.loading) return <Spinner />;
+const ManufactureDetails = ({ navigation, route }) => {
+  const { manufacture } = route.params;
 
-  const manufacture = manufactureStore.manufactures[1];
+  if (manufactureStore.loading) return <Spinner />;
 
   const kayaks = manufacture.kayaks.map((kayak) =>
     kayakStore.getKayakById(kayak.id)
