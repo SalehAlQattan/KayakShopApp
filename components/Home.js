@@ -1,5 +1,6 @@
 // react
 import React from 'react';
+import { View } from 'react-native';
 
 // styles
 import {
@@ -24,7 +25,7 @@ const Home = ({ navigation }) => {
         </TopStyling>
         <BottomStyling>
           <ButtonStyling onPress={() => navigation.navigate('ManufactureList')}>
-            Click here to skip
+            Tap here to skip
           </ButtonStyling>
         </BottomStyling>
       </OverLayContainter>
