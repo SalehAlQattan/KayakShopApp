@@ -5,7 +5,7 @@ import React from 'react';
 import { observer } from 'mobx-react';
 
 // react-native
-import { Image, Text } from 'react-native';
+import { Image } from 'react-native';
 
 // native-base
 import { List } from 'native-base';

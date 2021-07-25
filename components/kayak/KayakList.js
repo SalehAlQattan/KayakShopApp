@@ -19,7 +19,7 @@ import { ListWrapper } from './styles';
 const KayakList = ({ kayaks }) => {
   if (kayakStore.loading) return <Spinner />;
 
-  const kayakList = kayakStore.kayaks.map((kayak) => {
+  const kayakList = kayaks.map((kayak) => {
     return <KayakItem key={kayak.id} kayak={kayak} />;
   });
 

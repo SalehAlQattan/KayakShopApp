@@ -1,9 +1,6 @@
 // react
 import React from 'react';
 
-// react-native
-import { Text, View } from 'react-native';
-
 // styles
 import {
   HomeBackground,
