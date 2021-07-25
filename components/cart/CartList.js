@@ -2,7 +2,7 @@
 import React from 'react';
 
 // native-base
-import { List } from 'native-base';
+import { List, Spinner } from 'native-base';
 
 // stores
 import cartStore from '../../stores/cartStore';
@@ -15,6 +15,7 @@ import CartItem from './CartItem';
 import { observer } from 'mobx-react';
 
 const CartList = () => {
+  if (kayakStore.loading) return <Spinner />;
   const cartList = cartStore.items
     .map((item) => ({
       ...kayakStore.getKayakById(item.kayakId),
