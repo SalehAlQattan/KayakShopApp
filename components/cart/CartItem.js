@@ -1,7 +1,7 @@
 // react
 import React from 'react';
 
-// react-nativ
+// react-native
 import { Text } from 'react-native';
 
 // native-base

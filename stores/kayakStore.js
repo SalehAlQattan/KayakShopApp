@@ -15,7 +15,6 @@ class KayakStore {
       console.error('fetch kayak: ', error);
     }
   };
-  // ???
   getKayakById = (kayakId) => this.kayaks.find((kayak) => kayak.id === kayakId);
 }
 const kayakStore = new KayakStore();

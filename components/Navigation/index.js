@@ -53,7 +53,11 @@ export default RootNavigator = () => {
           };
         }}
       />
-      <Stack.Screen name="CartList" component={CartList} />
+      <Stack.Screen
+        options={{ title: 'Cart' }}
+        name="CartList"
+        component={CartList}
+      />
     </Stack.Navigator>
   );
 };
