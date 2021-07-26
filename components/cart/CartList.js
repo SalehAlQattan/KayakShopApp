@@ -14,6 +14,9 @@ import CartItem from './CartItem';
 // mobx
 import { observer } from 'mobx-react';
 
+// styles
+import { CheckoutButton, CheckoutButtonText } from './styles';
+
 const CartList = () => {
   if (kayakStore.loading) return <Spinner />;
   const cartList = cartStore.items
@@ -23,7 +26,14 @@ const CartList = () => {
     }))
     .map((item) => <CartItem item={item} key={item.id} />);
 
-  return <List>{cartList}</List>;
+  return (
+    <>
+      <List>{cartList}</List>
+      <CheckoutButton onPress={cartStore.checkout}>
+        <CheckoutButtonText>checkout</CheckoutButtonText>
+      </CheckoutButton>
+    </>
+  );
 };
 
 export default observer(CartList);

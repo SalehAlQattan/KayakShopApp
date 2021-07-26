@@ -24,6 +24,17 @@ class CartStore {
     await AsyncStorage.setItem('cart', JSON.stringify(this.items));
   };
 
+  deleteFromCart = async (itemId) => {
+    this.items = this.items.filter((item) => item.kayakId !== itemId);
+    await AsyncStorage.setItem('cart', JSON.stringify(this.items));
+  };
+
+  checkout = async () => {
+    this.items = [];
+    await AsyncStorage.removeItem('cart');
+    alert('Give Me Your Money!');
+  };
+
   get totalQuantity() {
     let total = 0;
     this.items.forEach((item) => (total += item.quantity));
