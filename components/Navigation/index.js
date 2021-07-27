@@ -13,6 +13,8 @@ import ManufactureDetails from '../manufacture/ManufactureDetails';
 import Home from '../Home';
 import CartList from '../cart/CartList';
 import CartButton from '../cart/buttons/CartButton';
+import Signin from '../authentication/Signin';
+import Signup from '../authentication/Signup';
 
 export default RootNavigator = () => {
   return (
@@ -57,6 +59,16 @@ export default RootNavigator = () => {
         options={{ title: 'Cart' }}
         name="CartList"
         component={CartList}
+      />
+      <Stack.Screen
+        name="Signin"
+        component={Signin}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Signup"
+        component={Signup}
+        options={{ headerShown: false }}
       />
     </Stack.Navigator>
   );
